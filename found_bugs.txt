@@ -46,7 +46,7 @@ CalculatorTest::testAdd
 Invalid argument supplied for foreach()
 
 ====
-4)  The function add() assumes parameters passed in as an array.  It fails if only a single value passed in.
+4)  The function multiply() assumes parameters passed in as an array.  It fails if only a single value passed in
   //BillyBrown @ 1-12-2017
   //test if the multiply() method in our calculator class works if passed only a single number (rather than an array)
       $product = $calc->multiply(10);
