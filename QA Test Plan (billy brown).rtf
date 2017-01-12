@@ -1,0 +1,141 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red180\green36\blue25;\red178\green178\blue178;\red133\green0\blue2;
+}
+\margl1440\margr1440\vieww14880\viewh14720\viewkind0
+\deftab720
+\pard\pardeftab720\sl720\sa160\qc
+
+\f0\b\fs54 \cf0 \expnd0\expndtw0\kerning0
+Test Plan for QA Engineer Trial Project
+\b0\fs24 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc
+\cf0 QA Test Plan Author - Billy Brown (billybrown@mac.com)\
+Written:  January 12, 2017\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+
+\b\fs28 Source Repository:
+\b0\fs24 \
+https://github.com/autolotto/sample_php\
+
+\b\fs28 \
+Test Plan Purpose:
+\b0\fs24 \
+To validate and test the 4 calculator classes contained within the project\
+\
+	
+\f1 \uc0\u9702 
+\f0 	Add\
+	
+\f1 \uc0\u9702 
+\f0 	Subtract\
+	
+\f1 \uc0\u9702 
+\f0 	Multply\
+	
+\f1 \uc0\u9702 
+\f0 	Divide\
+\
+
+\b\fs28 Specifications:
+\b0\fs24 \
+\pard\pardeftab720\sl400
+\cf0 Doc available at: http://go.autolotto.com/qaengtrial\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+
+\b\fs28 Testing to be Performed:
+\b0\fs24 \
+\
+	Boundary/Range\
+	Valid/invalid data\
+	Passing wrong number of parameters\
+	Integer vs. Floating point\
+	Double-negatives\
+	Performance\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Boundary/Range\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 - Verify classes can receive values including 0, negative numbers, positive numbers\
+- Verify extremely large values such as 2^32 and 2^63, or 2^64 boundaries (to catch overflow errors)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Valid/invalid data\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 - Attempt to pass in characters/string values when expecting a number\
+- Attempt to pass in to Divide() class a 0 for the divisor, to intentionally produce an error/undefined result\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Passing wrong number of parameters\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 - Attempt to pass a single value (non-array) when class is expecting an array\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Integer vs. Floating point\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 - Verify the classes correctly handle integer values\
+- Verify the classes can produce results that are integer values\
+- Verify the classes can correctly handle floating-point numbers as input\
+- Verify the classes can return results that are floating-point\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Double-negatives\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 - Verify that negative numbers can be passed into Subtract() thus resulting in a double-negative (which is addition)\
+- Verify that multiplication of an array of numbers with an odd-number of negative values inputs in a negative product\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Performance\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 - Verify that as the number of test cases increase, the length of time to run increases linear\
+- Verify running the test does not hang, but produces a valid report\
+- Verify runtime Memory requirements don\'92t increase (expected:  10.00MB)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b\fs28 \cf0 Example output from the test:
+\b0\fs24 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf0 \
+$ cd /Users/billybrown/GitHub/sample_php\
+$ phpunit tests/calculator_test.php --log-junit "shippable/testresults/log.junit.xml"\
+\
+
+\fs20 ===============================================================================\
+
+\f2\fs22 \CocoaLigature0 PHPUnit 5.7.5 by Sebastian Bergmann and contributors.\
+\
+...
+\f3\b \cf2 E
+\f2\b0 \cf0                                                                 4 / 4 (100%)\
+\
+Time: 107 ms, Memory: 10.00MB\
+\
+There was 1 error:\
+\
+1) CalculatorTest::testDivide\
+assert(): *** function divide() *** Division of 8 by 0 would be undefined! failed\
+\
+/Users/billybrown/GitHub/sample_php/calculator.php:28\
+/Users/billybrown/GitHub/sample_php/tests/calculator_test.php:144\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\cf3 \cb4 ERRORS!\cf0 \cb1 \
+\cf3 \cb4 Tests: 4, Assertions: 22, Errors: 1.
+\f0\fs20 \cf0 \cb1 \CocoaLigature1 \
+}
